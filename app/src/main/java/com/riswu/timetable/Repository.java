@@ -11,13 +11,19 @@ import java.util.Map;
 
 public class Repository {
   private static Map<Context, Repository> pool = new HashMap<>();
-  private SharedPreferences preferences;
+  private SharedPreferences store;
+  private Preferences preferences;
   private Map<String, Time> times;
   private Map<String, Subject> subjects;
 
   private static class UserData {
+    public Preferences preferences;
     public Map<String, Time> times;
     public Map<String, Subject> subjects;
+  }
+
+  private static Preferences createDefaultPreferences() {
+    return new Preferences(false);
   }
 
   private static Map<String, Time> createDefaultTimes() {
@@ -50,18 +56,24 @@ public class Repository {
   }
 
   private Repository(Context context) {
-    this.preferences = PreferenceManager.getDefaultSharedPreferences(context);
-    // this.preferences.edit().putString("user_data", "").apply();
-    String jsonRow = this.preferences.getString("user_data", "");
+    this.store = PreferenceManager.getDefaultSharedPreferences(context);
+    // this.store.edit().putString("user_data", "").apply();
+    String jsonRow = this.store.getString("user_data", "");
     if (!TextUtils.isEmpty(jsonRow)) {
       Gson gson = new Gson();
       UserData userData = gson.fromJson(jsonRow, Repository.UserData.class);
+      this.preferences = userData.preferences;
       this.times = userData.times;
       this.subjects = userData.subjects;
     } else {
+      this.preferences = Repository.createDefaultPreferences();
       this.times = Repository.createDefaultTimes();
       this.subjects = Repository.createDefaultSubjects();
     }
+  }
+
+  public synchronized Preferences getPreferences() {
+    return this.preferences;
   }
 
   public synchronized Map<String, Time> getTimes() {
@@ -70,6 +82,11 @@ public class Repository {
 
   public synchronized Map<String, Subject> getSubjects() {
     return new HashMap<>(this.subjects);
+  }
+
+  public synchronized void updatePreferences(Preferences preferences) {
+    this.preferences = preferences;
+    this.save();
   }
 
   public synchronized void updateTime(String id, Time time) {
@@ -84,9 +101,10 @@ public class Repository {
 
   private void save() {
     UserData userData = new UserData();
+    userData.preferences = this.preferences;
     userData.times = this.times;
     userData.subjects = this.subjects;
     Gson gson = new Gson();
-    this.preferences.edit().putString("user_data", gson.toJson(userData)).apply();
+    this.store.edit().putString("user_data", gson.toJson(userData)).apply();
   }
 }

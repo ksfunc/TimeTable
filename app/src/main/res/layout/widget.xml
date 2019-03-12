@@ -200,6 +200,7 @@
       android:text="" />
   </RelativeLayout>
   <RelativeLayout
+    android:id="@+id/subject_tile_view_6"
     android:layout_width="0dp"
     android:layout_height="match_parent"
     android:layout_weight="1"
