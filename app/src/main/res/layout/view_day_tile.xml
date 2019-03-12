@@ -7,13 +7,13 @@
   android:paddingHorizontal="6dp"
   android:orientation="vertical"
   android:gravity="center"
-  android:background="#8080e0">
+  android:background="@color/colorDayTile">
   <TextView
     android:id="@+id/day"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
     android:textSize="14sp"
-    android:textColor="#efefef"
+    android:textColor="@color/colorDayTileText"
     android:text="" />
 </LinearLayout>
