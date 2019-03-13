@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <color name="colorPrimary">#3F51B5</color>
-  <color name="colorPrimaryDark">#303F9F</color>
-  <color name="colorAccent">#FF4081</color>
-  <color name="colorDayTile">#8080E0</color>
-  <color name="colorTimeTile">#E08080</color>
-  <color name="colorSubjectTile">#EFEFEF</color>
-  <color name="colorDayTileText">#EFEFEF</color>
-  <color name="colorTimeTileText">#EFEFEF</color>
-</resources>
+  <color name="colorPrimary">#1ABC9C</color>
+  <color name="colorPrimaryDark">#16A085</color>
+  <color name="colorDayTile">#3498DB</color>
+  <color name="colorDayTileText">#FFFFFF</color>
+  <color name="colorTimeTile">#E74C3C</color>
+  <color name="colorTimeTileRipple">#FFE67E22</color>
+  <color name="colorTimeTileText">#FFFFFF</color>
+  <color name="colorSubjectTile">#ECF0F1</color>
+  <color name="colorSubjectTileRipple">#FFBDC3C7</color>
+  </resources>

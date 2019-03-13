@@ -10,7 +10,10 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import com.riswu.timetable.databinding.FragmentEditPreferencesBinding;
@@ -25,6 +28,9 @@ public class EditPreferencesFragment extends Fragment {
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     super.onCreateView(inflater, container, savedInstanceState);
+    this.setHasOptionsMenu(true);
+    ActionBar actionBar = ((AppCompatActivity) this.getActivity()).getSupportActionBar();
+    actionBar.setDisplayHomeAsUpEnabled(true);
 
     this.viewModel = ViewModelProviders.of(this, new ViewModelProvider.NewInstanceFactory() {
       @Override
@@ -42,6 +48,17 @@ public class EditPreferencesFragment extends Fragment {
     binding.setViewModel(this.viewModel);
     binding.setFragment(this);
     return binding.getRoot();
+  }
+
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+    switch (item.getItemId()) {
+      case android.R.id.home:
+        FragmentManager fragmentManager = this.getFragmentManager();
+        fragmentManager.popBackStack();
+        return true;
+    }
+    return false;
   }
 
   public void save() {

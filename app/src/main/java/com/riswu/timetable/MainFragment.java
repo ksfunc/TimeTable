@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.*;
 import com.riswu.timetable.databinding.FragmentMainBinding;
 
@@ -18,6 +20,8 @@ public class MainFragment extends Fragment {
   public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     super.onCreateView(inflater, container, savedInstanceState);
     this.setHasOptionsMenu(true);
+    ActionBar actionBar = ((AppCompatActivity) this.getActivity()).getSupportActionBar();
+    actionBar.setDisplayHomeAsUpEnabled(false);
 
     MainViewModel viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
     Repository repository = Repository.getInstance(this.getActivity().getApplication());

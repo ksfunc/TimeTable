@@ -34,8 +34,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="3f51b5" />
-                                      <entry key="foregroundImage" value="$PROJECT_DIR$/app/src/main/res/drawable-v24/icon.png" />
+                                      <entry key="backgroundColor" value="16a085" />
+                                      <entry key="foregroundImage" value="$PROJECT_DIR$/app/src/main/res/drawable/icon.png" />
                                     </map>
                                   </option>
                                 </PersistentState>

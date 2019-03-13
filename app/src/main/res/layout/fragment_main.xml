@@ -8,14 +8,16 @@
     <variable name="fragment" type="com.riswu.timetable.MainFragment" />
   </data>
 
-  <TableLayout
+  <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="2dp">
-    <TableRow
+    android:layout_margin="2dp"
+    android:orientation="vertical">
+    <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="0dp"
-      android:layout_weight="0.5">
+      android:layout_weight="0.5"
+      android:orientation="horizontal">
       <Space
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -51,12 +53,13 @@
         android:layout_weight="1"
         android:layout_margin="2dp"
         app:day='@{"Fri."}' />
-    </TableRow>
+    </LinearLayout>
 
-    <TableRow
+    <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="0dp"
-      android:layout_weight="1">
+      android:layout_weight="1"
+      android:orientation="horizontal">
       <com.riswu.timetable.TimeTileView
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -100,12 +103,13 @@
         android:layout_margin="2dp"
         app:subject='@{viewModel.subjects.get("fri-1")}'
         android:onClick='@{() -> fragment.editSubject("fri-1")}' />
-    </TableRow>
+    </LinearLayout>
 
-    <TableRow
+    <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="0dp"
-      android:layout_weight="1">
+      android:layout_weight="1"
+      android:orientation="horizontal">
       <com.riswu.timetable.TimeTileView
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -149,12 +153,13 @@
         android:layout_margin="2dp"
         app:subject='@{viewModel.subjects.get("fri-2")}'
         android:onClick='@{view -> fragment.editSubject("fri-2")}' />
-    </TableRow>
+    </LinearLayout>
 
-    <TableRow
+    <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="0dp"
-      android:layout_weight="1">
+      android:layout_weight="1"
+      android:orientation="horizontal">
       <com.riswu.timetable.TimeTileView
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -198,12 +203,13 @@
         android:layout_margin="2dp"
         app:subject='@{viewModel.subjects.get("fri-3")}'
         android:onClick='@{view -> fragment.editSubject("fri-3")}' />
-    </TableRow>
+    </LinearLayout>
 
-    <TableRow
+    <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="0dp"
-      android:layout_weight="1">
+      android:layout_weight="1"
+      android:orientation="horizontal">
       <com.riswu.timetable.TimeTileView
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -247,12 +253,13 @@
         android:layout_margin="2dp"
         app:subject='@{viewModel.subjects.get("fri-4")}'
         android:onClick='@{view -> fragment.editSubject("fri-4")}' />
-    </TableRow>
+    </LinearLayout>
 
-    <TableRow
+    <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="0dp"
-      android:layout_weight="1">
+      android:layout_weight="1"
+      android:orientation="horizontal">
       <com.riswu.timetable.TimeTileView
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -296,12 +303,13 @@
         android:layout_margin="2dp"
         app:subject='@{viewModel.subjects.get("fri-5")}'
         android:onClick='@{view -> fragment.editSubject("fri-5")}' />
-    </TableRow>
+    </LinearLayout>
 
-    <TableRow
+    <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="0dp"
       android:layout_weight="1"
+      android:orientation="horizontal"
       android:visibility="@{viewModel.has6ThClass == true ? View.VISIBLE : View.GONE}">
       <com.riswu.timetable.TimeTileView
         android:layout_width="0dp"
@@ -346,6 +354,6 @@
         android:layout_margin="2dp"
         app:subject='@{viewModel.subjects.get("fri-6")}'
         android:onClick='@{view -> fragment.editSubject("fri-6")}' />
-    </TableRow>
-  </TableLayout>
+    </LinearLayout>
+  </LinearLayout>
 </layout>

@@ -7,8 +7,7 @@
   android:paddingHorizontal="6dp"
   android:orientation="vertical"
   android:gravity="center"
-  android:foreground="?android:attr/selectableItemBackground"
-  android:background="@color/colorTimeTile">
+  android:background="@drawable/style_time_tile">
   <TextView
     android:id="@+id/num"
     android:layout_width="wrap_content"

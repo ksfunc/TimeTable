@@ -13,24 +13,24 @@
     <TextView
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:textSize="20sp"
+      android:textSize="18sp"
       android:text="Name" />
     <EditText
       android:id="@+id/name"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:textSize="18sp"
+      android:textSize="20sp"
       android:text="@={viewModel.name}" />
     <TextView
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:textSize="20sp"
+      android:textSize="18sp"
       android:text="Room" />
     <EditText
       android:id="@+id/room"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:textSize="18sp"
+      android:textSize="20sp"
       android:text="@={viewModel.room}" />
     <Space
       android:layout_width="match_parent"
