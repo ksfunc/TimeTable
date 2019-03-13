@@ -5,8 +5,10 @@
   <color name="colorDayTile">#3498DB</color>
   <color name="colorDayTileText">#FFFFFF</color>
   <color name="colorTimeTile">#E74C3C</color>
-  <color name="colorTimeTileRipple">#FFE67E22</color>
+  <color name="colorTimeTileRipple">#E67E22</color>
   <color name="colorTimeTileText">#FFFFFF</color>
   <color name="colorSubjectTile">#ECF0F1</color>
-  <color name="colorSubjectTileRipple">#FFBDC3C7</color>
+  <color name="colorSubjectTileRipple">#BDC3C7</color>
+  <color name="colorWidgetTile">#FFFFFF</color>
+  <color name="colorWidgetTileText">#000000</color>
   </resources>
