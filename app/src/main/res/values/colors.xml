@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <color name="colorPrimary">#1ABC9C</color>
-  <color name="colorPrimaryDark">#16A085</color>
+  <color name="colorPrimary">#18A690</color>
+  <color name="colorPrimaryDark">#15937F</color>
   <color name="colorDayTile">#3498DB</color>
   <color name="colorDayTileText">#FFFFFF</color>
   <color name="colorTimeTile">#E74C3C</color>
@@ -11,4 +11,4 @@
   <color name="colorSubjectTileRipple">#BDC3C7</color>
   <color name="colorWidgetTile">#FFFFFF</color>
   <color name="colorWidgetTileText">#000000</color>
-  </resources>
+</resources>
