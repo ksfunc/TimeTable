@@ -8,18 +8,20 @@
   <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginHorizontal="24dp"
     android:orientation="vertical">
+    <Space
+      android:layout_width="match_parent"
+      android:layout_height="12dp" />
     <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginHorizontal="24dp"
-      android:layout_marginVertical="12dp"
       android:orientation="vertical">
       <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
-        android:text="Start Time" />
+        android:text="開始時刻" />
       <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,25 +35,19 @@
         <Button
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="pick"
+          android:text="変更"
           android:onClick="@{view -> fragment.pickStartTime()}" />
       </LinearLayout>
     </LinearLayout>
-    <View
-      android:layout_width="match_parent"
-      android:layout_height="1dp"
-      android:background="@android:color/darker_gray" />
     <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginHorizontal="24dp"
-      android:layout_marginVertical="12dp"
       android:orientation="vertical">
       <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
-        android:text="End Time" />
+        android:text="終了時刻" />
       <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -65,26 +61,26 @@
         <Button
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="pick"
+          android:text="変更"
           android:onClick="@{view -> fragment.pickEndTime()}" />
       </LinearLayout>
     </LinearLayout>
-    <View
+    <Space
       android:layout_width="match_parent"
-      android:layout_height="1dp"
-      android:background="@android:color/darker_gray" />
+      android:layout_height="12dp" />
     <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginHorizontal="24dp"
-      android:layout_marginVertical="12dp"
       android:orientation="horizontal"
       android:gravity="right">
       <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="save"
+        android:text="保存"
         android:onClick="@{view -> fragment.save()}" />
     </LinearLayout>
+    <Space
+      android:layout_width="match_parent"
+      android:layout_height="12dp" />
   </LinearLayout>
 </layout>

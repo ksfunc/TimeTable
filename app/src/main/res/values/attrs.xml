@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="AppTheme">
+    <attr name="drawableDayTile" format="reference" />
+    <attr name="drawableSubjectTile" format="reference" />
+    <attr name="drawableTimeTile" format="reference" />
+    <attr name="colorDayTileText" format="color" />
+    <attr name="colorSubjectTileText" format="color" />
+    <attr name="colorTimeTileText" format="color" />
+  </declare-styleable>
+</resources>

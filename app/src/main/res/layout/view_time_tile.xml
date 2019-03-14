@@ -7,14 +7,14 @@
   android:paddingHorizontal="4dp"
   android:orientation="vertical"
   android:gravity="center"
-  android:background="@drawable/style_time_tile">
+  android:background="?attr/drawableTimeTile">
   <TextView
     android:id="@+id/num"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
     android:textSize="14sp"
-    android:textColor="@android:color/white"
+    android:textColor="?attr/colorTimeTileText"
     android:text="" />
   <TextView
     android:id="@+id/time"
@@ -22,6 +22,6 @@
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
     android:textSize="12sp"
-    android:textColor="@android:color/white"
+    android:textColor="?attr/colorTimeTileText"
     android:text="" />
 </LinearLayout>

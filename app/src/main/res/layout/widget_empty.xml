@@ -17,6 +17,6 @@
       android:layout_height="wrap_content"
       android:gravity="center_horizontal"
       android:textSize="14sp"
-      android:text="No lectures are in session today." />
+      android:text="本日は講義がありません" />
   </LinearLayout>
 </LinearLayout>

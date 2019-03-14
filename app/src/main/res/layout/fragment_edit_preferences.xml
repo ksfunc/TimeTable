@@ -8,40 +8,42 @@
   <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginHorizontal="24dp"
     android:orientation="vertical">
+    <Space
+      android:layout_width="match_parent"
+      android:layout_height="12dp" />
     <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginHorizontal="24dp"
-      android:layout_marginVertical="12dp"
       android:orientation="horizontal">
       <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textSize="18sp"
-        android:text="Add 6th Class" />
+        android:text="6時限目を追加する" />
       <Switch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:checked="@={viewModel.has6ThClass}" />
     </LinearLayout>
-    <View
+    <Space
       android:layout_width="match_parent"
-      android:layout_height="1dp"
-      android:background="@android:color/darker_gray" />
+      android:layout_height="12dp" />
     <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginHorizontal="24dp"
-      android:layout_marginVertical="12dp"
       android:orientation="horizontal"
       android:gravity="right">
       <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="save"
+        android:text="保存"
         android:onClick="@{view -> fragment.save()}" />
     </LinearLayout>
+    <Space
+      android:layout_width="match_parent"
+      android:layout_height="12dp" />
   </LinearLayout>
 </layout>

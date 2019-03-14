@@ -11,7 +11,7 @@
   <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="2dp"
+    android:layout_margin="4dp"
     android:orientation="vertical">
     <LinearLayout
       android:layout_width="match_parent"
@@ -31,8 +31,7 @@
           android:layout_width="0dp"
           android:layout_height="match_parent"
           android:layout_weight="1"
-          android:layout_margin="2dp"
-          app:day='@{"Mon."}' />
+          app:day='@{"月"}' />
         <Space
           android:layout_width="1dp"
           android:layout_height="match_parent" />
@@ -40,8 +39,7 @@
           android:layout_width="0dp"
           android:layout_height="match_parent"
           android:layout_weight="1"
-          android:layout_margin="2dp"
-          app:day='@{"Tue."}' />
+          app:day='@{"火"}' />
         <Space
           android:layout_width="1dp"
           android:layout_height="match_parent" />
@@ -49,8 +47,7 @@
           android:layout_width="0dp"
           android:layout_height="match_parent"
           android:layout_weight="1"
-          android:layout_margin="2dp"
-          app:day='@{"Wed."}' />
+          app:day='@{"水"}' />
         <Space
           android:layout_width="1dp"
           android:layout_height="match_parent" />
@@ -58,8 +55,7 @@
           android:layout_width="0dp"
           android:layout_height="match_parent"
           android:layout_weight="1"
-          android:layout_margin="2dp"
-          app:day='@{"Thu."}' />
+          app:day='@{"木"}' />
         <Space
           android:layout_width="1dp"
           android:layout_height="match_parent" />
@@ -67,8 +63,7 @@
           android:layout_width="0dp"
           android:layout_height="match_parent"
           android:layout_weight="1"
-          android:layout_margin="2dp"
-          app:day='@{"Fri."}' />
+          app:day='@{"金"}' />
       </LinearLayout>
     </LinearLayout>
 
@@ -86,7 +81,6 @@
           android:layout_width="match_parent"
           android:layout_height="0dp"
           android:layout_weight="1"
-          android:layout_margin="2dp"
           app:num='@{"1"}'
           app:time='@{String.format("%02d:%02d", viewModel.times.get("1").startHour, viewModel.times.get("1").startMinute)}'
           android:onClick='@{() -> fragment.editTime("1")}' />
@@ -97,7 +91,6 @@
           android:layout_width="match_parent"
           android:layout_height="0dp"
           android:layout_weight="1"
-          android:layout_margin="2dp"
           app:num='@{"2"}'
           app:time='@{String.format("%02d:%02d", viewModel.times.get("2").startHour, viewModel.times.get("2").startMinute)}'
           android:onClick='@{() -> fragment.editTime("2")}' />
@@ -108,7 +101,6 @@
           android:layout_width="match_parent"
           android:layout_height="0dp"
           android:layout_weight="1"
-          android:layout_margin="2dp"
           app:num='@{"3"}'
           app:time='@{String.format("%02d:%02d", viewModel.times.get("3").startHour, viewModel.times.get("3").startMinute)}'
           android:onClick='@{() -> fragment.editTime("3")}' />
@@ -119,7 +111,6 @@
           android:layout_width="match_parent"
           android:layout_height="0dp"
           android:layout_weight="1"
-          android:layout_margin="2dp"
           app:num='@{"4"}'
           app:time='@{String.format("%02d:%02d", viewModel.times.get("4").startHour, viewModel.times.get("4").startMinute)}'
           android:onClick='@{() -> fragment.editTime("4")}' />
@@ -130,7 +121,6 @@
           android:layout_width="match_parent"
           android:layout_height="0dp"
           android:layout_weight="1"
-          android:layout_margin="2dp"
           app:num='@{"5"}'
           app:time='@{String.format("%02d:%02d", viewModel.times.get("5").startHour, viewModel.times.get("5").startMinute)}'
           android:onClick='@{() -> fragment.editTime("5")}' />
@@ -143,7 +133,6 @@
           android:layout_width="match_parent"
           android:layout_height="0dp"
           android:layout_weight="1"
-          android:layout_margin="2dp"
           app:num='@{"6"}'
           app:time='@{String.format("%02d:%02d", viewModel.times.get("6").startHour, viewModel.times.get("6").startMinute)}'
           android:onClick='@{() -> fragment.editTime("6")}' />
@@ -163,7 +152,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("mon-1")}'
             android:onClick='@{() -> fragment.editSubject("mon-1")}' />
           <View
@@ -174,7 +162,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("tue-1")}'
             android:onClick='@{() -> fragment.editSubject("tue-1")}' />
           <View
@@ -185,7 +172,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("wed-1")}'
             android:onClick='@{() -> fragment.editSubject("wed-1")}' />
           <View
@@ -196,7 +182,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("thu-1")}'
             android:onClick='@{() -> fragment.editSubject("thu-1")}' />
           <View
@@ -207,7 +192,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("fri-1")}'
             android:onClick='@{() -> fragment.editSubject("fri-1")}' />
         </LinearLayout>
@@ -224,7 +208,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("mon-2")}'
             android:onClick='@{view -> fragment.editSubject("mon-2")}' />
           <View
@@ -235,7 +218,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("tue-2")}'
             android:onClick='@{view -> fragment.editSubject("tue-2")}' />
           <View
@@ -246,7 +228,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("wed-2")}'
             android:onClick='@{view -> fragment.editSubject("wed-2")}' />
           <View
@@ -257,7 +238,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("thu-2")}'
             android:onClick='@{view -> fragment.editSubject("thu-2")}' />
           <View
@@ -268,7 +248,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("fri-2")}'
             android:onClick='@{view -> fragment.editSubject("fri-2")}' />
         </LinearLayout>
@@ -285,7 +264,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("mon-3")}'
             android:onClick='@{view -> fragment.editSubject("mon-3")}' />
           <View
@@ -296,7 +274,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("tue-3")}'
             android:onClick='@{view -> fragment.editSubject("tue-3")}' />
           <View
@@ -307,7 +284,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("wed-3")}'
             android:onClick='@{view -> fragment.editSubject("wed-3")}' />
           <View
@@ -318,7 +294,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("thu-3")}'
             android:onClick='@{view -> fragment.editSubject("thu-3")}' />
           <View
@@ -329,7 +304,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("fri-3")}'
             android:onClick='@{view -> fragment.editSubject("fri-3")}' />
         </LinearLayout>
@@ -346,7 +320,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("mon-4")}'
             android:onClick='@{view -> fragment.editSubject("mon-4")}' />
           <View
@@ -357,7 +330,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("tue-4")}'
             android:onClick='@{view -> fragment.editSubject("tue-4")}' />
           <View
@@ -368,7 +340,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("wed-4")}'
             android:onClick='@{view -> fragment.editSubject("wed-4")}' />
           <View
@@ -379,7 +350,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("thu-4")}'
             android:onClick='@{view -> fragment.editSubject("thu-4")}' />
           <View
@@ -390,7 +360,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("fri-4")}'
             android:onClick='@{view -> fragment.editSubject("fri-4")}' />
         </LinearLayout>
@@ -407,7 +376,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("mon-5")}'
             android:onClick='@{view -> fragment.editSubject("mon-5")}' />
           <View
@@ -418,7 +386,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("tue-5")}'
             android:onClick='@{view -> fragment.editSubject("tue-5")}' />
           <View
@@ -429,7 +396,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("wed-5")}'
             android:onClick='@{view -> fragment.editSubject("wed-5")}' />
           <View
@@ -440,7 +406,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("thu-5")}'
             android:onClick='@{view -> fragment.editSubject("thu-5")}' />
           <View
@@ -451,7 +416,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("fri-5")}'
             android:onClick='@{view -> fragment.editSubject("fri-5")}' />
         </LinearLayout>
@@ -470,7 +434,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("mon-6")}'
             android:onClick='@{view -> fragment.editSubject("mon-6")}' />
           <View
@@ -481,7 +444,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("tue-6")}'
             android:onClick='@{view -> fragment.editSubject("tue-6")}' />
           <View
@@ -492,7 +454,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("wed-6")}'
             android:onClick='@{view -> fragment.editSubject("wed-6")}' />
           <View
@@ -503,7 +464,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("thu-6")}'
             android:onClick='@{view -> fragment.editSubject("thu-6")}' />
           <View
@@ -514,7 +474,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="2dp"
             app:subject='@{viewModel.subjects.get("fri-6")}'
             android:onClick='@{view -> fragment.editSubject("fri-6")}' />
         </LinearLayout>
