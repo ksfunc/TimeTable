@@ -1,11 +1,8 @@
 package com.riswu.timetable;
 
-import android.appwidget.AppWidgetManager;
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProviders;
-import android.content.ComponentName;
-import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -66,12 +63,7 @@ public class EditPreferencesFragment extends Fragment {
     Repository repository = Repository.getInstance(this.getActivity().getApplication());
     repository.updatePreferences(preferences);
 
-    Intent intent = new Intent(this.getActivity().getApplication(), Widget.class);
-    intent.setAction("android.appwidget.action.APPWIDGET_UPDATE");
-    AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(this.getActivity().getApplication());
-    int[] ids = appWidgetManager.getAppWidgetIds(new ComponentName(this.getActivity().getApplication(), Widget.class));
-    intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids);
-    this.getActivity().getApplication().sendBroadcast(intent);
+    Widget.update(this.getActivity().getApplication());
 
     FragmentManager fragmentManager = this.getFragmentManager();
     fragmentManager.popBackStack();

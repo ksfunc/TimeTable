@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ripple
   xmlns:android="http://schemas.android.com/apk/res/android"
-  android:color="@color/colorTimeTileRipple">
+  android:color="#40FFFFFF">
+  <item android:id="@android:id/mask">
+    <shape android:shape="rectangle">
+      <solid android:color="@android:color/white" />
+      <corners android:radius="3dp" />
+    </shape>
+  </item>
   <item>
-    <color android:color="@color/colorTimeTile" />
+    <shape android:shape="rectangle">
+      <solid android:color="@android:color/holo_red_light" />
+      <corners android:radius="3dp" />
+    </shape>
   </item>
 </ripple>
