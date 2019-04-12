@@ -4,14 +4,14 @@
     <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
   </style>
   <style name="AppTheme.Light" parent="AppTheme">
-    <item name="android:colorBackground">@android:color/background_light</item>
+    <item name="android:colorBackground">@android:color/white</item>
     <item name="android:textColor">@android:color/black</item>
     <item name="android:editTextColor">@android:color/black</item>
     <item name="drawableDayTile">@drawable/style_day_tile_light</item>
     <item name="drawableSubjectTile">@drawable/style_subject_tile_light</item>
     <item name="drawableTimeTile">@drawable/style_time_tile_light</item>
-    <item name="colorDayTileText">@android:color/white</item>
+    <item name="colorDayTileText">@android:color/black</item>
     <item name="colorSubjectTileText">@android:color/black</item>
-    <item name="colorTimeTileText">@android:color/white</item>
+    <item name="colorTimeTileText">@android:color/black</item>
   </style>
 </resources>

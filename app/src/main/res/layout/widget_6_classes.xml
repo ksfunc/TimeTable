@@ -3,14 +3,14 @@
   android:id="@+id/widget_root"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:padding="4dp"
+  android:paddingVertical="2dp"
   android:orientation="horizontal"
   android:background="?android:attr/colorBackground">
   <RelativeLayout
     android:layout_width="0dp"
     android:layout_height="match_parent"
     android:layout_weight="1"
-    android:paddingHorizontal="2dp">
+    android:paddingHorizontal="4dp">
     <TextView
       android:id="@+id/subject_tile_view_1_start"
       android:layout_width="wrap_content"
@@ -29,6 +29,7 @@
       android:textSize="14sp"
       android:ellipsize="end"
       android:maxLines="2"
+      android:textColor="@android:color/black"
       android:text="" />
     <TextView
       android:id="@+id/subject_tile_view_1_room"
@@ -43,14 +44,14 @@
       android:text="" />
   </RelativeLayout>
   <LinearLayout
-    android:layout_width="1dp"
+    android:layout_width="1px"
     android:layout_height="match_parent"
     android:background="@android:color/darker_gray" />
   <RelativeLayout
     android:layout_width="0dp"
     android:layout_height="match_parent"
     android:layout_weight="1"
-    android:paddingHorizontal="2dp">
+    android:paddingHorizontal="4dp">
     <TextView
       android:id="@+id/subject_tile_view_2_start"
       android:layout_width="wrap_content"
@@ -69,6 +70,7 @@
       android:textSize="14sp"
       android:ellipsize="end"
       android:maxLines="2"
+      android:textColor="@android:color/black"
       android:text="" />
     <TextView
       android:id="@+id/subject_tile_view_2_room"
@@ -83,14 +85,14 @@
       android:text="" />
   </RelativeLayout>
   <LinearLayout
-    android:layout_width="1dp"
+    android:layout_width="1px"
     android:layout_height="match_parent"
     android:background="@android:color/darker_gray" />
   <RelativeLayout
     android:layout_width="0dp"
     android:layout_height="match_parent"
     android:layout_weight="1"
-    android:paddingHorizontal="2dp">
+    android:paddingHorizontal="4dp">
     <TextView
       android:id="@+id/subject_tile_view_3_start"
       android:layout_width="wrap_content"
@@ -109,6 +111,7 @@
       android:textSize="14sp"
       android:ellipsize="end"
       android:maxLines="2"
+      android:textColor="@android:color/black"
       android:text="" />
     <TextView
       android:id="@+id/subject_tile_view_3_room"
@@ -123,14 +126,14 @@
       android:text="" />
   </RelativeLayout>
   <LinearLayout
-    android:layout_width="1dp"
+    android:layout_width="1px"
     android:layout_height="match_parent"
     android:background="@android:color/darker_gray" />
   <RelativeLayout
     android:layout_width="0dp"
     android:layout_height="match_parent"
     android:layout_weight="1"
-    android:paddingHorizontal="2dp">
+    android:paddingHorizontal="4dp">
     <TextView
       android:id="@+id/subject_tile_view_4_start"
       android:layout_width="wrap_content"
@@ -149,6 +152,7 @@
       android:textSize="14sp"
       android:ellipsize="end"
       android:maxLines="2"
+      android:textColor="@android:color/black"
       android:text="" />
     <TextView
       android:id="@+id/subject_tile_view_4_room"
@@ -163,14 +167,14 @@
       android:text="" />
   </RelativeLayout>
   <LinearLayout
-    android:layout_width="1dp"
+    android:layout_width="1px"
     android:layout_height="match_parent"
     android:background="@android:color/darker_gray" />
   <RelativeLayout
     android:layout_width="0dp"
     android:layout_height="match_parent"
     android:layout_weight="1"
-    android:paddingHorizontal="2dp">
+    android:paddingHorizontal="4dp">
     <TextView
       android:id="@+id/subject_tile_view_5_start"
       android:layout_width="wrap_content"
@@ -189,6 +193,7 @@
       android:textSize="14sp"
       android:ellipsize="end"
       android:maxLines="2"
+      android:textColor="@android:color/black"
       android:text="" />
     <TextView
       android:id="@+id/subject_tile_view_5_room"
@@ -203,14 +208,14 @@
       android:text="" />
   </RelativeLayout>
   <LinearLayout
-    android:layout_width="1dp"
+    android:layout_width="1px"
     android:layout_height="match_parent"
     android:background="@android:color/darker_gray" />
   <RelativeLayout
     android:layout_width="0dp"
     android:layout_height="match_parent"
     android:layout_weight="1"
-    android:paddingHorizontal="2dp">
+    android:paddingHorizontal="4dp">
     <TextView
       android:id="@+id/subject_tile_view_6_start"
       android:layout_width="wrap_content"
@@ -229,6 +234,7 @@
       android:textSize="14sp"
       android:ellipsize="end"
       android:maxLines="2"
+      android:textColor="@android:color/black"
       android:text="" />
     <TextView
       android:id="@+id/subject_tile_view_6_room"
