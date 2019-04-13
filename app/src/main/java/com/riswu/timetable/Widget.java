@@ -134,7 +134,6 @@ public class Widget extends AppWidgetProvider {
 
   @Override
   public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
-    // There may be multiple widgets active, so update all of them
     for (int appWidgetId : appWidgetIds) {
       Widget.updateAppWidget(context, appWidgetManager, appWidgetId);
     }
@@ -142,25 +141,14 @@ public class Widget extends AppWidgetProvider {
 
   @Override
   public void onEnabled(Context context) {
-    // Enter relevant functionality for when the first widget_5_classes is created
+    Intent intent = new Intent(context.getApplicationContext(), WidgetService.class);
+    context.getApplicationContext().startService(intent);
   }
 
   @Override
   public void onDisabled(Context context) {
-    // Enter relevant functionality for when the last widget_5_classes is disabled
-  }
-
-  @Override
-  public void onReceive(Context context, Intent intent) {
-    super.onReceive(context, intent);
-    switch (intent.getAction()) {
-      case Intent.ACTION_DATE_CHANGED:
-        Widget.update(context);
-        break;
-      case Intent.ACTION_TIMEZONE_CHANGED:
-        Widget.update(context);
-        break;
-    }
+    Intent intent = new Intent(context.getApplicationContext(), WidgetService.class);
+    context.getApplicationContext().stopService(intent);
   }
 }
 
