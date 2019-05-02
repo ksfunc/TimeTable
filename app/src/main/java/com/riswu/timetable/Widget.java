@@ -1,5 +1,6 @@
 package com.riswu.timetable;
 
+import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
@@ -10,6 +11,7 @@ import android.widget.RemoteViews;
 
 import java.util.Calendar;
 import java.util.Map;
+import java.util.TimeZone;
 
 public class Widget extends AppWidgetProvider {
   public static void update(Context context) {
@@ -23,6 +25,8 @@ public class Widget extends AppWidgetProvider {
 
   public static void updateAppWidget(Context context, AppWidgetManager appWidgetManager, int appWidgetId) {
     String day = Widget.getDayId();
+    if (day == null) return;
+
     if (day.equals("sun") || day.equals("sat")) {
       RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_empty);
 
@@ -139,16 +143,54 @@ public class Widget extends AppWidgetProvider {
     }
   }
 
+  private void startAlarm(Context context) {
+    Calendar calendar = Calendar.getInstance(TimeZone.getDefault());
+    calendar.set(Calendar.HOUR_OF_DAY, 0);
+    calendar.set(Calendar.MINUTE, 0);
+    calendar.set(Calendar.SECOND, 0);
+    calendar.set(Calendar.MILLISECOND, 0);
+    calendar.add(Calendar.DAY_OF_MONTH, 1);
+    AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+    Intent intent = new Intent(context, Widget.class);
+    intent.setAction("com.riswu.timetable.action.DATE_CHANGED");
+    PendingIntent alarmIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
+    alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
+  }
+
+  private void stopAlarm(Context context) {
+    AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+    Intent intent = new Intent(context, Widget.class);
+    PendingIntent alarmIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
+    alarmManager.cancel(alarmIntent);
+  }
+
   @Override
   public void onEnabled(Context context) {
-    Intent intent = new Intent(context.getApplicationContext(), WidgetService.class);
-    context.getApplicationContext().startService(intent);
+    super.onEnabled(context);
+    this.startAlarm(context);
   }
 
   @Override
   public void onDisabled(Context context) {
-    Intent intent = new Intent(context.getApplicationContext(), WidgetService.class);
-    context.getApplicationContext().stopService(intent);
+    super.onDisabled(context);
+    this.stopAlarm(context);
+  }
+
+  @Override
+  public void onReceive(Context context, Intent intent) {
+    super.onReceive(context, intent);
+    switch (intent.getAction()) {
+      case Intent.ACTION_TIMEZONE_CHANGED:
+        this.stopAlarm(context);
+        this.startAlarm(context);
+        Widget.update(context);
+        break;
+      case "com.riswu.timetable.action.DATE_CHANGED":
+        this.stopAlarm(context);
+        this.startAlarm(context);
+        Widget.update(context);
+        break;
+    }
   }
 }
 
